@@ -1,0 +1,81 @@
+[System]
+Name='fuzzyRobotWallFollowing'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=2
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='FS'
+Range=[10 60]
+NumMFs=3
+MF1='Near':'trapmf',[-8 10 30 35]
+MF2='Med':'trimf',[30 35 40]
+MF3='Far':'trapmf',[35 40 60 78]
+
+[Input2]
+Name='BS'
+Range=[10 60]
+NumMFs=3
+MF1='Near':'trapmf',[-12 10 30 35]
+MF2='Med':'trimf',[30 35 40]
+MF3='Far':'trapmf',[35 40 60 78]
+
+[Input3]
+Name='HS'
+Range=[10 60]
+NumMFs=3
+MF1='Near':'trapmf',[-7.577 10 30 35]
+MF2='Med':'trimf',[30 35 40]
+MF3='Far':'trapmf',[35 40 60 78]
+
+[Output1]
+Name='LM'
+Range=[0 50]
+NumMFs=3
+MF1='Slow':'trimf',[-20 0 25]
+MF2='Med':'trimf',[0 25 50]
+MF3='Fast':'trimf',[25 50 70]
+
+[Output2]
+Name='RM'
+Range=[0 50]
+NumMFs=3
+MF1='Slow':'trimf',[-20 0 25]
+MF2='Med':'trimf',[0 25 50]
+MF3='Fast':'trimf',[25 50 70]
+
+[Rules]
+1 1 1, 3 1 (1) : 1
+1 1 2, 3 1 (1) : 1
+1 1 3, 3 2 (1) : 1
+1 2 1, 3 1 (1) : 1
+1 2 2, 3 1 (1) : 1
+1 2 3, 3 1 (1) : 1
+1 3 1, 3 1 (1) : 1
+1 3 2, 3 1 (1) : 1
+1 3 3, 3 1 (1) : 1
+2 1 1, 3 1 (1) : 1
+2 1 2, 3 2 (1) : 1
+2 1 3, 1 3 (1) : 1
+2 2 1, 3 1 (1) : 1
+2 2 2, 3 2 (1) : 1
+2 2 3, 3 3 (1) : 1
+2 3 1, 3 1 (1) : 1
+2 3 2, 3 2 (1) : 1
+2 3 3, 3 1 (1) : 1
+3 1 1, 3 1 (1) : 1
+3 1 2, 3 2 (1) : 1
+3 1 3, 3 2 (1) : 1
+3 2 1, 3 1 (1) : 1
+3 2 2, 3 2 (1) : 1
+3 2 3, 1 3 (1) : 1
+3 3 1, 3 1 (1) : 1
+3 3 2, 3 2 (1) : 1
+3 3 3, 2 3 (1) : 1
