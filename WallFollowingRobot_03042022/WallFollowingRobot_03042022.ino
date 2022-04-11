@@ -9,10 +9,10 @@
 #include <FuzzySet.h>
 
 // setting the maximum and minimum values
-  #define MAX_DISTANCE_FRONT 80
-  #define MIN_DISTANCE_FRONT 50
-  #define MAX_DISTANCE_LATERAL 80
-  #define MIN_DISTANCE_LATERAL 30
+  #define MAX_DISTANCE_FRONT 70
+  #define MIN_DISTANCE_FRONT 40
+  #define MAX_DISTANCE_LATERAL 50
+  #define MIN_DISTANCE_LATERAL 10
   #define MAX_SPEED 100
   #define MIN_SPEED 0
 
